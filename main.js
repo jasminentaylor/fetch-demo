@@ -1,6 +1,6 @@
 const input = document.querySelector('input');
 const button = document.querySelector('button')
-const countryDiv = document.querySelector('.country-div')
+const countryDiv = document.querySelector('.country-data')
 
 // add event listener to our button
 button.addEventListener('click', function() {
@@ -14,10 +14,10 @@ button.addEventListener('click', function() {
         console.log(countryData);
         // array destructuring 
         //const [countryData] = data;
-
+        //name, flag, region, capitol, population
         const image = document.createElement('img');
         image.src = countryData.flag;
         image.classList.add('flag')
-        document.body.append(image);
+        countryDiv.append(image);
     });
 });
