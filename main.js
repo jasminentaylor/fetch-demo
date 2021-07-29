@@ -15,9 +15,21 @@ button.addEventListener('click', function() {
         // array destructuring 
         //const [countryData] = data;
         //name, flag, region, capitol, population
-        const image = document.createElement('img');
-        image.src = countryData.flag;
-        image.classList.add('flag')
-        countryDiv.append(image);
+
+        const html = 
+        `
+        <h2>${countryData.name}</h2>
+        <img src="${countryData.flag}" alt="flag of ${countryData.name}" title="flag of ${countryData.name}" class="flag">
+        <h3>${countryData.region}</h3>
+        <h4>Capital: ${countryData.capital}</h4>
+        <h4>Population: ${countryData.population}</h4>
+
+        `
+        countryDiv.innerHTML = html;
+        
+        //const image = document.createElement('img');
+        //image.src = countryData.flag;
+        //image.classList.add('flag')
+        //countryDiv.append(image);
     });
 });
